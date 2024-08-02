@@ -1,8 +1,39 @@
+// 1. Created Variable
+const mybank = `bankBranchInstance`;
+// 2. Defined class `BankBranch`
+class BankBranch {
+    constructor(branchInfo) {
+// 3. Checking if the `bankBranchInstance` is null        
+        if (BankBranch.mybank == null)
+            // initialising
+            this.branchInfo = []
+            // creating new instance with provided `branchInfo`
+        BankBranch.mybank = this
+        console.log(BankBranch)
+        console.log(branchInfo)
+        console.log(mybank)
+        console.log(this)
+        count.log(`${this.branchInfo.length}`)
+        console.log()
+    }
+    
+   
+}
+
+// First Try and not giving errors any consoles
+
+
+
+
+
+
 // This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
 // 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
 
+
 // 2. Define a class called `BankBranch` for managing branch information.
+
 
 // 3. In the `BankBranch` class:
 //    - Create a constructor that takes `branchInfo` as a parameter.
@@ -10,7 +41,9 @@
 //    - If `bankBranchInstance` is null, create a new instance with the provided `branchInfo` and assign it to `bankBranchInstance`.
 //    - Return the `bankBranchInstance` whether it's newly created or existing.
 
+
 // 4. Add methods to the `BankBranch` class for managing branch-related information. For example, you can add a method like `getBranchInfo` to retrieve branch details.
+
 
 // 5. In the usage section:
 //    - Create instances of the `BankBranch` class, such as `branchA` and `branchB`, with different branch information.
