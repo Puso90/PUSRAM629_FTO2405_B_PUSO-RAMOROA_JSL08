@@ -1,36 +1,115 @@
 // 1. Created Variable
-const mybank = `bankBranchInstance`;
-// 2. Defined class `BankBranch`
+//const bankBranchInstance = instance  | I tried this and it give error when I create variable
+
+//Defined class `BankBranch`
 class BankBranch {
-    constructor(branchInfo) {
-// 3. Checking if the `bankBranchInstance` is null        
-        if (BankBranch.mybank == null)
-            // initialising
-            this.branchInfo = []
-            // creating new instance with provided `branchInfo`
-        BankBranch.mybank = this
-        console.log(BankBranch)
-        console.log(branchInfo)
-        console.log(mybank)
-        console.log(this)
-        count.log(`${this.branchInfo.length}`)
-        console.log()
+//
+
+    constructor() {
+      if (BankBranch._instance) {
+        return BankBranch._instance
+      }
+      BankBranch._instance = this;
+      
+      // ... needs log consoles here 
     }
+  }
+  
+  var instanceOne = new BankBranch()
+  var instanceTwo = new BankBranch()
+  
+  console.log(instanceOne === instanceTwo)
+
+
+
+
+
+
+
+//3. In the `BankBranch` class:
+//    - Create a constructor that takes `branchInfo` as a parameter.
+//    - Inside the constructor, check if the `bankBranchInstance` variable is null (indicating no instance exists).
+//    - If `bankBranchInstance` is null, create a new instance with the provided `branchInfo` and assign it to `bankBranchInstance`.
+//    - Return the `bankBranchInstance` whether it's newly created or existing.
+
+
+// 4. Add methods to the `BankBranch` class for managing branch-related information. For example, you can add a method like `getBranchInfo` to retrieve branch details.
+
+
+// 5. In the usage section:
+//    - Create instances of the `BankBranch` class, such as `branchA` and `branchB`, with different branch information.
+//    - Use the `getBranchInfo` method to retrieve branch information from the instances.
+//    - Verify that `branchA` and `branchB` are both referring to the same instance by comparing them using `===`.
+/*
+
+*/
+
+
+
+
+
+
+//____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+//____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+/* COMMENTS & NOTES
+
+    1. First Try and not giving errors any consoles and not console'ing anything.
+
+
+
+
+//____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    TRY OUTS:
+
+    1. class BankBranch {
+       static bankBranchInstance 
+            constructor(branchInfo) {
+                if (bankBranchInstance == null) {
+                    branchInfo = bankBranchInstance
+                }
+                return bankBranchInstance
+            }
+
+            getBranchInfo(message) {
+                console.log(`First Log: ${message}`);
+            }
+            printLogCount() {
+                console.log(`${branchInfo.length} number of logs.`)    
+            }
+        }
+ 
+        const logger = new BankBranch()
+        Object.freeze(logger);
+
+        2.  class BankBranch {
     
-   
-}
+            constructor() {
+                if (BankBranch.bankBranchInstance == null) {
+                    branchInfo = new bankBranchInstance
+                }
+                return 
+            }
+        
+            getBranchInfo() {
+                console.log(`First Log: ${branchInfo}`);
+            }
+            printLogCount() {
+                console.log(`${branchInfo.length} number of logs.`)    
+            }
+        }
+        
+        
+        const bankBranchInstance = new BankBranch()
+        Object.freeze(bankBranchInstance);
 
-// First Try and not giving errors any consoles
 
 
-
-
-
+*/
+//____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 // This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
 // 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
-
 
 // 2. Define a class called `BankBranch` for managing branch information.
 
