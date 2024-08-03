@@ -14,13 +14,9 @@ class BankBranch {
       // ... needs log consoles here 
       // Ahh... I'm close but logs - 'undefined' with a "Can't find variable: getBranchInfo"
         
+        console.log(`First Log: ${BankBranch.banckBranchInstance}`);
     
-        
-        console.log(`First Log: ${getBranchInfo}`);
-    
-        console.log(`${this.length} LOGS`);
-      
-
+        console.log(`${BankBranch.length} LOGS`);
     }
   }
   
@@ -30,7 +26,7 @@ class BankBranch {
   console.log(branchA === branchB)
 
   const bankBranchInstance = new BankBranch()
-        Object.freeze(bankBranchInstance);
+        Object.freeze(BankBranch.bankBranchInstance);
 
    
 
@@ -59,8 +55,16 @@ class BankBranch {
 
 
 //____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+//REFERENCE:
+/*
+
+    1.      https://stackoverflow.com/questions/1479319/simplest-cleanest-way-to-implement-a-singleton-in-javascript
+
+    2.      
+
+
 //____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-/* COMMENTS & NOTES
+ COMMENTS & NOTES
 
     1. First Try and not giving errors any consoles and not console'ing anything.
 
