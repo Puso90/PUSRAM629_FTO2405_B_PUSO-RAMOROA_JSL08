@@ -5,25 +5,34 @@
 class BankBranch {
 //
 
-    constructor() {
-      if (BankBranch._instance) {
-        return BankBranch._instance
+    constructor(getBranchInfo) {
+      if (BankBranch.banckBranchInstance) {
+        return BankBranch.banckBranchInstance;
       }
-      BankBranch._instance = this;
+      BankBranch.banckBranchInstance = this;
       
       // ... needs log consoles here 
+      // Ahh... I'm close but logs - 'undefined' with a "Can't find variable: getBranchInfo"
+        
+    
+        
+        console.log(`First Log: ${getBranchInfo}`);
+    
+        console.log(`${this.length} LOGS`);
+      
+
     }
   }
   
-  var instanceOne = new BankBranch()
-  var instanceTwo = new BankBranch()
+  var branchA = new BankBranch()
+  var branchB = new BankBranch()
   
-  console.log(instanceOne === instanceTwo)
+  console.log(branchA === branchB)
 
+  const bankBranchInstance = new BankBranch()
+        Object.freeze(bankBranchInstance);
 
-
-
-
+   
 
 
 //3. In the `BankBranch` class:
